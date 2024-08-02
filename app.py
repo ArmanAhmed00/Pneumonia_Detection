@@ -6,11 +6,11 @@ from keras.models import load_model
 import numpy as np
 
 app = Flask(__name__)
-UPLOAD_FOLDER = '/Users/armanahmed/Downloads/minor2/uploads'
+UPLOAD_FOLDER = 'uploads'
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
-model = load_model('/Users/armanahmed/Downloads/minor2/models/model.h5')
+model = load_model('models/model.h5')
 
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
